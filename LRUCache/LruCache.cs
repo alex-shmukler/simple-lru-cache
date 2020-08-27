@@ -44,7 +44,9 @@ namespace LRUCache
             {
                 if (CacheMap.Count >= Capacity)
                 {
-                    RemoveFirst();
+                    CacheMap.Remove(LruList.First.Value.Key);
+
+                    LruList.RemoveFirst();
                 }
 
                 LinkedListNode<LruCacheItem> node = new LinkedListNode<LruCacheItem>(new LruCacheItem(key, value));
@@ -53,13 +55,6 @@ namespace LRUCache
 
                 CacheMap.Add(key, node);
             }
-        }
-
-        private void RemoveFirst()
-        {
-            CacheMap.Remove(LruList.First.Value.Key);
-
-            LruList.RemoveFirst();
         }
 
         private class LruCacheItem
