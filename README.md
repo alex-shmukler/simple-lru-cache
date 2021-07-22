@@ -1,6 +1,7 @@
 # simple-lru-cache
-### LRU Cache Implementation with Dictionary and LinkedList (interview question)
+### LRU Cache (interview question)
 
+LRU Cache Implementation with Dictionary and LinkedList 
 
 Get Complexity: O(1)
 
