@@ -16,7 +16,7 @@ namespace LRUCache
 
             if (lruCache.TryGetValue("item1", out object item1))
             {
-                // item1 not exist
+                // do something with item1
             }
             else
             {
